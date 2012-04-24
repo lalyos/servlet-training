@@ -23,10 +23,8 @@
       <param-name>message</param-name>
       <param-value>Time left till coffe break: </param-value>
     </init-param>
-    </servlet>
-    
-    
-      <servlet>
+  </servlet>
+  <servlet>
     <description></description>
     <display-name>GohomeServlet</display-name>
     <servlet-name>GohomeServlet</servlet-name>
@@ -40,9 +38,7 @@
       <param-name>message</param-name>
       <param-value>Time left till end of Lesson: </param-value>
     </init-param>
-    </servlet>
-    
-    
+  </servlet>
   <servlet-mapping>
     <servlet-name>CoffeServlet</servlet-name>
     <url-pattern>/coffee/*</url-pattern>
@@ -51,5 +47,15 @@
   <servlet-mapping>
     <servlet-name>GohomeServlet</servlet-name>
     <url-pattern>/gohome</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LateServlet</display-name>
+    <servlet-name>LateServlet</servlet-name>
+    <servlet-class>com.epam.training.servlet.LateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LateServlet</servlet-name>
+    <url-pattern>/addLate</url-pattern>
   </servlet-mapping>
 </web-app>
