@@ -72,11 +72,17 @@ public class ForumServlet extends HttpServlet {
 		} else {
 		    Map<String, String> forum = getForum();
 		    String timestamp = sdf.format(new Date());
-		    forum.put(timestamp + "===" + user, message);
+		    forum.put(getFacebookPictureTag(request) + timestamp + "===" + user, message);
 		    
 		    generateMessageListHtml(response);
 		}
 
 	}
+
+    private String getFacebookPictureTag(HttpServletRequest request) {
+        String fbid = (String) request.getSession().getAttribute("fbid");
+   
+        return "<img src='http://graph.facebook.com/" + fbid + "/picture' />";
+    }
 
 }
