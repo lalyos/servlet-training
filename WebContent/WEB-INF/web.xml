@@ -68,4 +68,14 @@
     <servlet-name>LoginServlet</servlet-name>
     <url-pattern>/login</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ForumServlet</display-name>
+    <servlet-name>ForumServlet</servlet-name>
+    <servlet-class>com.epam.training.servlet.ForumServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ForumServlet</servlet-name>
+    <url-pattern>/postForum</url-pattern>
+  </servlet-mapping>
 </web-app>
