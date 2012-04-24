@@ -42,7 +42,7 @@ public class LateServlet extends HttpServlet {
         } else {
             prevValue = minutes;
         }
-        hallOfFame.put(name, prevValue);
+        hallOfFame.put(name.replaceAll("<", "&gt;"), prevValue);
         
         generateHallOfFame(response);
 	}
