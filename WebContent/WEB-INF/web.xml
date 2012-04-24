@@ -78,4 +78,14 @@
     <servlet-name>ForumServlet</servlet-name>
     <url-pattern>/postForum</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FacebookAuthServlet</display-name>
+    <servlet-name>FacebookAuthServlet</servlet-name>
+    <servlet-class>com.epam.training.servlet.FacebookAuthServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FacebookAuthServlet</servlet-name>
+    <url-pattern>/fbauth</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -39,4 +39,15 @@ public class LoginServlet extends HttpServlet {
 
 	}
 
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse response)
+            throws ServletException, IOException {
+        
+        String host = "mekbuk.epam.com";
+        response.getWriter().println("<div>");
+        response.getWriter().println("<a href=\"https://www.facebook.com/dialog/oauth?client_id=229865077115394&redirect_uri=http://" + host +":8080/fbauth&scope=&state=abc123\">Log in via Facebook</a>");
+        response.getWriter().println("</div>");
+
+    }
+
 }
