@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>lunch</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>CoffeServlet</display-name>
+    <servlet-name>CoffeServlet</servlet-name>
+    <servlet-class>com.epam.training.servlet.LunchServlet</servlet-class>
+    <init-param>
+      <description>bla</description>
+      <param-name>lunchtimepattern</param-name>
+      <param-value>2012.04.24 15:00</param-value>
+    </init-param>
+    <init-param>
+      <param-name>message</param-name>
+      <param-value>Time left till coffe break: </param-value>
+    </init-param>
+    </servlet>
+    
+    
+      <servlet>
+    <description></description>
+    <display-name>GohomeServlet</display-name>
+    <servlet-name>GohomeServlet</servlet-name>
+    <servlet-class>com.epam.training.servlet.LunchServlet</servlet-class>
+    <init-param>
+      <description>bla</description>
+      <param-name>lunchtimepattern</param-name>
+      <param-value>2012.04.24 16:32</param-value>
+    </init-param>
+    <init-param>
+      <param-name>message</param-name>
+      <param-value>Time left till end of Lesson: </param-value>
+    </init-param>
+    </servlet>
+    
+    
+  <servlet-mapping>
+    <servlet-name>CoffeServlet</servlet-name>
+    <url-pattern>/coffee/*</url-pattern>
+    <url-pattern>*.htm</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>GohomeServlet</servlet-name>
+    <url-pattern>/gohome</url-pattern>
+  </servlet-mapping>
+</web-app>
