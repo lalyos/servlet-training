@@ -21,7 +21,7 @@ public class LateServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+	    generateHallOfFame(response);
 	}
 
 	/**
@@ -44,12 +44,17 @@ public class LateServlet extends HttpServlet {
         }
         hallOfFame.put(name, prevValue);
         
+        generateHallOfFame(response);
+	}
+
+    private void generateHallOfFame(HttpServletResponse response)
+            throws IOException {
         response.getWriter().println("<TABLE border=\"1\"><tr><th>Name</th><th>Minutes<th></tr>");
 		for (String nextName : hallOfFame.keySet()) {
             Integer nextMinutes = hallOfFame.get(nextName);
             response.getWriter().println("<tr><td>" + nextName + "</td><td>" + nextMinutes + "</td></tr>");
         }
         response.getWriter().println("</TABLE>");
-	}
+    }
 
 }
